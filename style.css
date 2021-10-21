@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: chocolate;
+}
+
+h1 {
+  font-size: 45px;
+  text-transform: uppercase;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 35vh;
+  border-bottom: 3px solid white;
+  color: white;
+}
+h1:hover {
+  color: blue;
+  background: linear-gradient(yellow, red);
+  border-color: blue;
+}
