@@ -1,110 +1,82 @@
 "use strict";
+// Task1
+let arr = [5, 25, 89, 120, 36];
+let newArr = arr.push("javascript", "python");
+let addStringArr = arr.unshift("html", "css");
+let removeElStart = arr.shift();
+let removeElEnd = arr.pop();
+console.log(arr.length);
+console.log(arr);
 
-// Tast1
-let user = {
-  firsName: "giorgi",
-  lastName: "smith",
-  age: 25,
-  studentStatus: "active",
-};
+console.log("---Task2---");
 
-console.log(user.studentStatus);
-console.log("---ForLoop---");
-// Task2
-/// For Loop
-let arr = [5, 6, 10, 25, 3, 7, 4, 100, 28, 36, 89];
-for (let i = 0; i < arr.length; i++) {
-  console.log(arr[i]);
-}
+let fruits = ["Orange", "Bananas", "Pear"];
+console.log(fruits.length);
+let pushFruit = fruits.push("Apple", "Pineapple");
+console.log(pushFruit);
+let addFruit = fruits.unshift("Watermelon");
+let spliceFruit = fruits.splice(3, 0, "Mango");
+let popFruit = fruits.pop();
+let shifFruit = fruits.shift();
+console.log(fruits.length);
+console.log(fruits);
 
-///While Loop
-console.log("---WhileLoop---");
-let i = 0;
-while (i < arr.length) {
-  i++;
-  console.log(arr[i]);
-}
-//Task3
 console.log("---Task3---");
-let arrNumbers = [5, 6, 10, 25, 3, 7, 4, 100, 28, 36, 89];
 
-for (let i = 0; i < arrNumbers.length; i++) {
-  if (arrNumbers[i] > 5) {
-    console.log(arrNumbers[i]);
-  }
-}
+let aRray = [12, 25, 3, 6, 8, 14, 7, 23].map(function (currEl) {
+  return currEl / 3;
+});
+console.log(aRray);
 
 console.log("---Task4---");
 
-let users = [
-  { username: "test1", status: false },
-  { username: "test2", status: false },
-  { username: "test3", status: true },
-];
-
-for (let i = 0; i < users.length; i++) {
-  if (users[i].status === true) {
-    console.log(users[i]);
+let arRay = [
+  "Hello",
+  125,
+  "Javascript",
+  "html",
+  43,
+  "css",
+  "scss",
+  "bootstrap",
+  88,
+  59,
+  "python",
+].filter(function (currEl) {
+  if (typeof currEl === "number") {
+    console.log(currEl);
   }
-}
+});
 
 console.log("---Task5---");
 
-let nestedArr = [
-  [2, -3, 5, 11],
-  [1, -30, -11, 1000],
-  [-1, -3, -4],
-];
-
-for (let i = 0; i < nestedArr.length; i++) {
-  // console.log(nestedArr[i]);
-  for (let j = 0; j < nestedArr.length; j++) {
-    if (nestedArr[i][j] > 0) {
-      console.log(nestedArr[i][j]);
-    }
-  }
-}
+let languages = ["html", "css", "javascript", "python", "php"].filter(
+  (currEl) => currEl.length > 3
+);
+console.log(languages);
 
 console.log("---Task6---");
 
-console.log(6 === "6"); // return false because srting is not number
+let arraY = ["academy", "of", "digital", "industries"].reduce(
+  (prevEl, currEl) => prevEl + " " + currEl
+);
+console.log(arraY);
 
 console.log("---Task7---");
 
-let wordsArray = ["html", "css", "bootstrap", "javascript", "python"];
-
-for (let i = 0; i < wordsArray.length; i++) {
-  if (wordsArray[i].length > 5 && wordsArray[i].includes("ava")) {
-    console.log(wordsArray[i]);
+let item = [12, "google", 32, null, "yahoo", 25].map(function (currEl) {
+  if (typeof currEl === "number") {
+    return currEl * currEl;
+  } else {
+    let newARRay = [];
+    newARRay.push(currEl); // ??
   }
-}
+});
+console.log(item);
 
 console.log("---Task8---");
 
-let studentUser = {
-  name: "giorgi",
-  age: 20,
-  studentStatus: "active",
-};
-
-if (studentUser.age > 18) {
-  console.log("Hello Student");
-}
-if (studentUser.name === "giorgi") {
-  console.log("Hello Giorgi");
-}
-if (studentUser.status === "active" || studentUser.age < 25) {
-  console.log("Hello JavaScript world");
-} else {
-  console.log("Error");
-}
-
-console.log("---Task9---");
-
-let stringArray = ["watermelon", "pear", 10, 45, 50, "apple", "ananas"];
-
-for (let i = 0; i < stringArray.length; i++) {
-  if (typeof stringArray[i] === "string") {
-    console.log(stringArray[i]);
-  }
-}
+let words = ["Madrid", "Rome", "Milan", "Berlin"].filter(
+  (item) => item.includes("m") || item.includes("M")
+);
+console.log(words);
